@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from server.routes.student import router as StudentRouter
+from server.routes.book import router as BookRouter
 
 app = FastAPI()
 
@@ -9,4 +9,4 @@ async def read_root():
     return {"message": "Welcome to your new API"}
 
 
-app.include_router(StudentRouter, tags=["Student"], prefix="/student")
+app.include_router(BookRouter, tags=["Book"], prefix="/book")
