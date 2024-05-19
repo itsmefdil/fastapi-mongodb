@@ -22,3 +22,7 @@ $ python main.py
 ```bash
 $ docker-compose up
 ```
+
+### Access the API
+
+open your browser and go to `http://localhost:8000/docs`
