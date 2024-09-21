@@ -11,3 +11,17 @@ services:
     working_dir: /app
     command: python main.py
     network_mode: host
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
